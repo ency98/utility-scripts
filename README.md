@@ -1,4 +1,4 @@
-# utility-scripts
+# Bash utility scripts
 Various bash scripts to do various things
 
 ## random-64-char-hex.sh
