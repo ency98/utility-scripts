@@ -47,7 +47,7 @@ function Show-Help {
     Write-Host ""
 
     Write-Host "USAGE:" -ForegroundColor Yellow
-    Write-Host "  .\Veeam_BackupJob_CheckStatus_RunFallbackJob_OnFailed.ps1 <QueryJob> <FailoverJob> [options]"
+    Write-Host "  .\RunFallbackJob_OnFailed.ps1 <QueryJob> <FailoverJob> [options]"
     Write-Host ""
     Write-Host "ARGUMENTS:" -ForegroundColor Yellow
     Write-Host "  <QueryJob>      The name of the Veeam backup job to check."
@@ -90,19 +90,19 @@ function Show-Help {
     Write-Host "EXAMPLES:" -ForegroundColor Yellow
     Write-Host ""
     Write-Host "  # Standard run - silent, starts failover job if QueryJob failed"
-    Write-Host "  .\Veeam_BackupJob_CheckStatus_RunFallbackJob_OnFailed.ps1 'PROD_SQL_Backup' 'PROD_SQL_Backup_Failover'" -ForegroundColor Green
+    Write-Host "  .\RunFallbackJob_OnFailed.ps1 'PROD_SQL_Backup' 'PROD_SQL_Backup_Failover'" -ForegroundColor Green
     Write-Host ""
     Write-Host "  # Dry run - shows all steps but does NOT start any jobs"
-    Write-Host "  .\Veeam_BackupJob_CheckStatus_RunFallbackJob_OnFailed.ps1 'PROD_SQL_Backup' 'PROD_SQL_Backup_Failover' -DryRun" -ForegroundColor Green
+    Write-Host "  .\RunFallbackJob_OnFailed.ps1 'PROD_SQL_Backup' 'PROD_SQL_Backup_Failover' -DryRun" -ForegroundColor Green
     Write-Host ""
     Write-Host "  # Verbose - shows detailed output and DOES start failover job if needed"
-    Write-Host "  .\Veeam_BackupJob_CheckStatus_RunFallbackJob_OnFailed.ps1 'PROD_SQL_Backup' 'PROD_SQL_Backup_Failover' -Verbose" -ForegroundColor Green
+    Write-Host "  .\RunFallbackJob_OnFailed.ps1 'PROD_SQL_Backup' 'PROD_SQL_Backup_Failover' -Verbose" -ForegroundColor Green
     Write-Host ""
     Write-Host "  # Dry run + Verbose - maximum detail, does NOT start any jobs"
-    Write-Host "  .\Veeam_BackupJob_CheckStatus_RunFallbackJob_OnFailed.ps1 'PROD_SQL_Backup' 'PROD_SQL_Backup_Failover' -DryRun -Verbose" -ForegroundColor Green
+    Write-Host "  .\RunFallbackJob_OnFailed.ps1 'PROD_SQL_Backup' 'PROD_SQL_Backup_Failover' -DryRun -Verbose" -ForegroundColor Green
     Write-Host ""
     Write-Host "  # Show this help message"
-    Write-Host "  .\Veeam_BackupJob_CheckStatus_RunFallbackJob_OnFailed.ps1 -Help" -ForegroundColor Green
+    Write-Host "  .\RunFallbackJob_OnFailed.ps1 -Help" -ForegroundColor Green
     Write-Host ""
     Write-Host "========================================================" -ForegroundColor Cyan
     Write-Host ""
