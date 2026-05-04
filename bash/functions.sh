@@ -314,7 +314,7 @@ prompt_for_sudo()
 run_as_root()
 {
     task_title "Checking if script is run as root"
-    
+
     if [ "$(id -u)" -ne 0 ]; then
         EXIT_STATUS="1"
         MESSAGE="This script must be run as root."
@@ -357,7 +357,7 @@ set_user_info()
     echo -e "\n${B_YELLOW}       * USER: ${B_MAGENTA}${USERNAME}${NC}"
     echo -e "${B_YELLOW}       * UID:  ${B_MAGENTA}${USER_UID}${NC}"
     echo -e "${B_YELLOW}       * GID:  ${B_MAGENTA}${USER_GID}${NC}\n"
-    
+
     task_banner "end" "Set Username, UID, and GID"
 }
 #! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !#
@@ -375,7 +375,7 @@ discover_user_info()
     echo -e "\n${B_YELLOW}       * USER: ${B_MAGENTA}${USERNAME}${NC}"
     echo -e "${B_YELLOW}       * UID:  ${B_MAGENTA}${USER_UID}${NC}"
     echo -e "${B_YELLOW}       * GID:  ${B_MAGENTA}${USER_GID}${NC}\n"
-    
+
     task_banner "end" "Discover current user information"
 }
 #! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !#
@@ -388,7 +388,7 @@ prompt_user_query()
     local TITLE_MSG="$1"
     local PROMPT_MSG="$2"
     local EXIT_MSG="$3"
-    
+
     #? PROMPT USER FOR INPUT
     task_banner "start" "${TITLE_MSG}"
     echo -e "${B_YELLOW}"
@@ -404,7 +404,7 @@ prompt_user_query()
 prompt_for_domain_info()
 {
     local RESULT_DOMAIN
-    
+
     #? PROMPT FOR DOMAIN
     task_banner "start" "Please enter Active Directory Domain name you wish to join"
     echo -e "${B_YELLOW}"
@@ -672,7 +672,7 @@ create_file()
     local FILE="$1"
 
     task_title "Create file if it does not exist: ${CYAN}${FILE}"
-    
+
     subtask_title "Checking if file exists"
     #? Check if file exists
     if [ -f "${FILE}" ]; then
@@ -700,9 +700,9 @@ create_file()
 create_directory()
 {
     local DIR="$1"
-    
+
     task_title "Create directory if it does not exist: ${CYAN}${DIR}"
-    
+
     subtask_title "Checking if directory exists"
     #? Check if directory exists
     if [ -d "${DIR}" ]; then
@@ -1060,7 +1060,7 @@ reload_shell()
     esac
 }
 #! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !#
-#? ABOUT: Display a fake download progress bar to spice up the output and add 
+#? ABOUT: Display a fake download progress bar to spice up the output and add
 #?        a little deplay to the script
 #* USEAGE: download_bar
 #* EXAMPLE: download_bar
@@ -1075,12 +1075,12 @@ download_bar()
     echo -e "\n"
 }
 #! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !#
-#? ABOUT: Spinner function to show a spinner while a command is running. Useful 
+#? ABOUT: Spinner function to show a spinner while a command is running. Useful
 #?        if command is slow, running quietly, or in the background.
 #* USEAGE: <command>|<func> & spin
 #* EXAMPLE: <command>|<func> & spin
 
-spin() 
+spin()
 {
   local pid=$!
   local delay=0.1
